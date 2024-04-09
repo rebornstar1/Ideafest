@@ -1,4 +1,5 @@
 import React from 'react'
+import Payment from './Payment'
 
 function Analysis() {
   return (

@@ -7,6 +7,14 @@ import projectRouter from "./routes/Projectroute.js"
 import ImageUploadRoute from "./routes/ImageUploadRoute.js"
 import multer from "multer";
 import cors from "cors";
+import Stripe from 'stripe';
+import {v4 as uuid} from "uuid"
+
+const stripe = new Stripe('sk_test_51P3EqMSANBGDnCuCCzFQ4WH1iAOfdl6x1dEjewrYTpLdn3dvaEOVB5KXlw0jmSTGfmRBVRymOyVkZCTJPsbqxANw00AXCDwpbU', {
+  apiVersion: '2023-10-16' // Specify your desired API version here
+});
+
+
 import { urlencoded } from "express";
 dotenv.config();
 import { upload } from "./middlewares/multer.middleware.js";
@@ -41,6 +49,39 @@ const PORT = 3000;
 app.listen(PORT,()=>{
     console.log('Server is Running on the Port 6969')
 })
+
+// Stripe Payment Route
+//app.use('/api/payment',PaymentRouter)
+app.post("/payment",(req,res,next)=>{
+  const {product,token} = req.body;
+  // I will pass this token from the front end in the data to backend
+  console.log("Product Details",product);
+  console.log("Price",product.price)
+  const idempotencyKey = uuid();
+
+  // uuid key makes sure to avoid be multiple payments
+
+  return stripe.customers.create({
+    email : token.email,
+    source : token.id
+  }).then(customer => {
+    stripe.charges.create({
+      amount : product.price * 100,
+      currency : "usd",
+      customer : customer.id,
+      receipt_email : token.email,
+      description : product.name,
+      shipping : {
+        name : token.card.name,
+        address : {
+          country : "USA"
+        }
+      }
+    },{idempotencyKey})
+  }).then(result => res.status(201).json(result))
+  .catch(err => next(err))
+})
+
 
 app.use('/api/auth',postRouter)
 app.use('/api/user',userRouter)

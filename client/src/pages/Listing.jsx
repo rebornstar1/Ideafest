@@ -4,6 +4,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend, Chart} from 'chart.js'
 import { Doughnut } from 'react-chartjs-2'
 import Analysis from './Analysis'
 import { useState } from 'react'
+import Payment from './Payment'
 
 Chart.register(ArcElement);
 
@@ -154,9 +155,7 @@ function Listing() {
         </div>
         <div>
             <div className="flex flex-row flex-wrap gap-2 justify-center mt-8 space-x-4">
-              <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
-                Invest
-              </button>
+              <Payment/>
               <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded">
                 Watch Later
               </button>

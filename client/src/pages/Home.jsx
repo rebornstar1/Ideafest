@@ -3,6 +3,7 @@ import Wwedo from "../Components/Wwedo";
 import Services from "../Components/Services";
 import 'animate.css'
 import HomeStats from "../Components/HomeStats";
+import Payment from "./Payment";
 
 function Home() {
   return (

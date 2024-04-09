@@ -14,7 +14,7 @@ export default function Header() {
               <div className='flex flex-row justify-between text-lg gap-6'>
                 <div className='hidden sm:inline text-gray-900 hover:text-orange-500 rounded-2xl m-3 tracking-widest font-medium pt-6'><Link to='/'>Home</Link></div>
                 <div className='hidden sm:inline text-gray-900 hover:text-orange-500 rounded-2xl m-3 tracking-widest font-medium pt-6'><Link to='/models'>Ideas</Link></div>
-                <div className='hidden md:inline text-gray-900 hover:text-orange-500 rounded-2xl m-3 tracking-widest font-medium pt-6'><Link to='/about'>Create Project</Link></div>
+                <div className='hidden md:inline text-gray-900 hover:text-orange-500 rounded-2xl m-3 tracking-widest font-medium pt-6'><Link to='/createproject'>Create Project</Link></div>
                 <div className='hidden lg:inline text-gray-900 hover:text-orange-500 rounded-2xl m-3 tracking-widest font-medium pt-6'><Link to='/about'>About</Link></div>
                 <div className='hidden lg:inline text-gray-900 hover:text-orange-500 rounded-2xl m-3 tracking-widest font-medium pt-6'><Link to='/about'>Contact Us</Link></div>
               </div>
