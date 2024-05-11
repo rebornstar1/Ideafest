@@ -1,6 +1,9 @@
 import React from 'react'
 import StripeCheckout from "react-stripe-checkout"
 import { useState } from 'react'
+import Stripe from "stripe"
+
+const stripe = new Stripe('sk_test_51P3EqMSANBGDnCuCCzFQ4WH1iAOfdl6x1dEjewrYTpLdn3dvaEOVB5KXlw0jmSTGfmRBVRymOyVkZCTJPsbqxANw00AXCDwpbUpk_test_51P3EqMSANBGDnCuC0WRlbvtCE8zA8PKvY9R0n6xxhUjXcc6aiAkLs9bUPBRKIkxu8fyZ3IG1tDcl1YVsHroKJNcr006LgdFQZZ');
 
 
 function Payment() {
@@ -12,6 +15,7 @@ function Payment() {
         price: 100,
         productBy: "reborn_star"  
     })
+    
 
     const makeInvestment = token => {
        const body = {

@@ -14,10 +14,12 @@ function About() {
          <div>
             <div className='py-2'>
                <div>Vision : </div>
+               <br></br>
                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus, ipsum non sagittis tincidunt, sapien nulla lobortis odio, eu condimentum nisi leo et arcu. Mauris rutrum nulla id eros suscipit, ac elementum lorem vehicula. Fusce ut libero nec leo vehicula blandit. Aliquam nec sapien id nunc tincidunt tempor. Ut auctor tellus eu efficitur tincidunt. Duis scelerisque neque at consectetur fermentum. Integer lacinia euismod arcu. Vestibulum non libero id odio vulputate la</div>
             </div>
             <div className='py-2'>
                 <div>Mission : </div>
+                <br></br>
                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus, ipsum non sagittis tincidunt, sapien nulla lobortis odio, eu condimentum nisi leo et arcu. Mauris rutrum nulla id eros suscipit, ac elementum lorem vehicula. Fusce ut libero nec leo vehicula blandit. Aliquam nec sapien id nunc tincidunt tempor. Ut auctor tellus eu efficitur tincidunt. Duis scelerisque neque at consectetur fermentum. Integer lacinia euismod arcu. Vestibulum non libero id odio vulputate la</div>
             </div>
          </div>
