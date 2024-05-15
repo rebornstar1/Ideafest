@@ -30,7 +30,7 @@ const Footer = () => {
     <div className='bg-gray-950 mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-white p-6 md:p-20 font-montserrat'>
       {/* Left section with brand and social icons */}
       <div>
-        <h1 className='w-full text-3xl lg:text-4xl xl:text-5xl font-bold text-white'>Ideafest</h1>
+        <h1 className='w-full text-3xl lg:text-4xl xl:text-5xl font-bold text-white'>VentureBoost</h1>
         <p className='py-4'>
         Spark connections and ignite innovation with our business idea sharing app, where entrepreneurs collide in a digital marketplace of creativity and collaboration.
         </p>

@@ -13,6 +13,7 @@ import Update from './pages/Update'
 import Listing from './pages/Listing'
 import Advcards from './Components/Advcards'
 import About from './pages/About'
+import Dashboard from './pages/Dashboard'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Route path='/signout' element={<Signout/>}/>
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/listing/:listingId' element={<Listing/>}/>
+      <Route path='listing/dashboard/:dashId' element={<Dashboard/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/profile' element={<Privateroute/>}>
          <Route path='/profile' element={<Profile/>}/>
