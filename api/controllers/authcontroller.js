@@ -3,7 +3,7 @@ import bcryptjs from 'bcryptjs'
 import maerr from '../utils/error.js'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
-import e from 'express'
+import express from 'express'
 
 export const Signup = async (req,res,next) => {
 

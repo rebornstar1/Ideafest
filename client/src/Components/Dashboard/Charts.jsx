@@ -26,9 +26,9 @@ function Charts(props) {
   }
 
   return (
-    <div className='bg-[#FFFFFF] rounded-lg p-10 pt-4 mx-auto'>
-        <div className='font-semibold'>{props.title}</div>
-        <div className='w-[192px] h-[192px] pt-6'>
+    <div className='bg-[#FFFFFF] rounded-lg p-10 sm:px-2 md:px-8 pt-4 mx-auto'>
+        <div className='font-semibold flex flex-wrap w-[128px] md:w-[192px]'>{props.title}</div>
+        <div className='md:w-[192px] md:h-[192px] w-[128px] h-[128px] pt-6'>
           <Doughnut data={uniteco} className='mx-auto'/>
         </div>
     </div>

@@ -29,7 +29,7 @@ function Models() {
 
   return (
     <div className="bg-white font-montserrat">
-      <div className="text-gray-950 text-3xl font-semibold text-center">HOT Trending</div>
+      <div className="text-gray-950 text-3xl font-semibold text-center">Limited Edition Startups</div>
           <div className=" gap-8 md:gap-5 flex flex-row flex-wrap text-center p-10 md:p-15 items-center mx-auto justify-center">
           {projects.map(project => (
             <Advcards id={project.ProjectName} project={project} ProjectName={project.ProjectName} ProjectDescribe={

@@ -16,13 +16,6 @@ export const CreateProject = async(req,res,next) => {
       console.log(newProject);
       await newProject.validate();
       return res.status(201).json("Project Created Successfully!");
-    // const newUser = await User.create({username,email,password : hashedpassword});
-    // try {
-    // await newUser.validate();
-    // return res.status(201).json("User Created Successfully!");
-    // } catch(error){
-    //     next(error)
-    // }
     }
     catch(error){
         console.log(error);
@@ -32,7 +25,6 @@ export const CreateProject = async(req,res,next) => {
 export const GetProject =  async(req,res,next) => {
   try{
      const allproject = await Project.find();
-    // console.log(allproject);
      res.status(201).json(allproject)
   } catch(error){
     console.log(error);

@@ -9,6 +9,7 @@ import multer from "multer";
 import cors from "cors";
 import Stripe from 'stripe';
 import {v4 as uuid} from "uuid"
+import DashboardRoute from "./routes/DashboardRoute.js"
 
 const stripe = new Stripe('sk_test_51P3EqMSANBGDnCuCCzFQ4WH1iAOfdl6x1dEjewrYTpLdn3dvaEOVB5KXlw0jmSTGfmRBVRymOyVkZCTJPsbqxANw00AXCDwpbU', {
   apiVersion: '2023-10-16' // Specify your desired API version here
@@ -82,6 +83,7 @@ app.post("/payment",(req,res,next)=>{
   .catch(err => next(err))
 })
 
+app.use('/api/dashboard',DashboardRoute)
 
 app.use('/api/auth',postRouter)
 app.use('/api/user',userRouter)

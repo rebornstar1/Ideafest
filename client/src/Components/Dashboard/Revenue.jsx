@@ -30,9 +30,9 @@ function Revenue() {
     <div className='flex flex-col pb-4'>
         <div className='font-semibold text-xl md:text-2xl p-4'>Revenue and Sales Projection</div>
         <div className='flex flex-row flex-wrap'>
-            <div className='flex flex-row flex-wrap p-2 px-6 gap-4'>
-                  <div className=' rounded-lg mx-auto'>
-                    <div className='md:w-[192px] h-[192px]'>
+            <div className='flex flex-row flex-wrap p-2 px-6 gap-4 mx-auto my-auto'>
+                  <div className=' rounded-lg'>
+                    <div className='w-[128px] h-[128px] md:w-[192px] md:h-[192px]'>
                       <Doughnut data={uniteco} className='mx-auto'/>
                     </div>
                   </div>
