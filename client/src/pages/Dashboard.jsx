@@ -12,6 +12,7 @@ import Orders from '../Components/Dashboard/Orders'
 import Ianalytics from '../Components/Dashboard/Ianalytics'
 import Ifeedback from '../Components/Dashboard/Ifeedback'
 import Iinvest from '../Components/Dashboard/Iinvest.jsx'
+import Ainvest from '../Components/Dashboard/Ainvest.jsx'
 
 function Dashboard() {
 
@@ -39,7 +40,7 @@ function Dashboard() {
              <Data image={SimImg} titles={"Similar Startups"} flag = { val == 5 ? 1 : 0}/>
           </div>
         </div>
-        {val === 1 ? <Ianalytics/> : val === 3 ? <Ifeedback/> : val === 4 ? <Iinvest/> : <Iinvest/>}
+        {val === 1 ? <Ianalytics/> : val === 3 ? <Ifeedback/> : val === 4 ? <Ainvest/> : <Iinvest/>}
         <div className='bg-[#F0F0F0] hidden lg:inline w-1/5 rounded-lg shadow-md'>
          <Updates/>
         </div>

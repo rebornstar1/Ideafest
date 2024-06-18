@@ -10,6 +10,7 @@ import cors from "cors";
 import Stripe from 'stripe';
 import {v4 as uuid} from "uuid"
 import DashboardRoute from "./routes/DashboardRoute.js"
+import OfferInvestRoute from "./routes/DashboardRoute.js"
 
 const stripe = new Stripe('sk_test_51P3EqMSANBGDnCuCCzFQ4WH1iAOfdl6x1dEjewrYTpLdn3dvaEOVB5KXlw0jmSTGfmRBVRymOyVkZCTJPsbqxANw00AXCDwpbU', {
   apiVersion: '2023-10-16' // Specify your desired API version here
@@ -48,7 +49,7 @@ app.use(express.urlencoded({ extended : false}));
 const PORT = 3000;
 
 app.listen(PORT,()=>{
-    console.log('Server is Running on the Port 6969')
+    console.log('Server is Running on the Port 3000')
 })
 
 // Stripe Payment Route
@@ -82,6 +83,9 @@ app.post("/payment",(req,res,next)=>{
   }).then(result => res.status(201).json(result))
   .catch(err => next(err))
 })
+
+// Investment Route Options
+app.use('/api/invest',OfferInvestRoute);
 
 app.use('/api/dashboard',DashboardRoute)
 

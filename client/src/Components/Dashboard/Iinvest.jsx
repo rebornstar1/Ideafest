@@ -3,7 +3,7 @@ import InvestRecord from './InvestRecord';
 
 function Iinvest() {
   return (
-    <div className='flex flex-col lg:w-7/12 w-9/12 gap-4'>
+    <div className='flex flex-col lg:w-7/12 w-9/12 gap-4 mx-auto'>
         <div className=' bg-[#FFFFFF] rounded-lg shadow-md'>
              <div className='text-3xl m-3'>Funding Rounds</div>
              <div className='bg-[#F0F0F0] shadow-md'>
