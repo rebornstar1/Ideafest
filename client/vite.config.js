@@ -12,4 +12,15 @@ export default defineConfig({
     }
   },
   plugins: [react()],
+  resolve: {
+    alias: {
+      '@': '/src'
+    }
+  },
+  build: {
+    rollupOptions: {
+      input: '/src/main.jsx',
+      external: []
+    }
+  }
 })
