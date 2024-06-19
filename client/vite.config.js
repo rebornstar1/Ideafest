@@ -20,7 +20,10 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: "./client/src/main.jsx",
-      external: []
+      external: [
+          "react", // ignore react stuff
+          "react-dom",
+      ]
     }
   }
 })
