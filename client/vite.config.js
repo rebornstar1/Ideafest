@@ -20,7 +20,17 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: "/src/main.jsx",
-      external: []
+      output:{
+        manualChunks(id) {
+            if (id.includes('node_modules')) {
+                return id.toString().split('node_modules/')[1].split('/')[0].toString();
+            }
+        }
+      },
+      external: [
+        "react",
+        "react-dom"
+      ]
     }
   }
 })
