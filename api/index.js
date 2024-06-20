@@ -11,6 +11,7 @@ import Stripe from 'stripe';
 import {v4 as uuid} from "uuid"
 import DashboardRoute from "./routes/DashboardRoute.js"
 import OfferInvestRoute from "./routes/DashboardRoute.js"
+import path from "path";
 
 const stripe = new Stripe('sk_test_51P3EqMSANBGDnCuCCzFQ4WH1iAOfdl6x1dEjewrYTpLdn3dvaEOVB5KXlw0jmSTGfmRBVRymOyVkZCTJPsbqxANw00AXCDwpbU', {
   apiVersion: '2023-10-16' // Specify your desired API version here
@@ -27,6 +28,8 @@ mongoose.connect(process.env.MONGO).then(()=>{
 }).catch((err) => {
     console.log(err)
 })
+
+const __dirname = path.resolve();
 
 const app = express();
 app.use(cors());
@@ -93,6 +96,12 @@ app.use('/api/auth',postRouter)
 app.use('/api/user',userRouter)
 app.use('/api/projects',projectRouter)
 app.use('/api/uploads',ImageUploadRoute)
+
+app.use(express.static(path.join(__dirname,'/client/dist')));
+
+app.get('*',(req,res) => {
+  res.sendFile(path.join(__dirname,'client','dist','index.html'));
+})
 
 app.use((err,req,res,next) => {
     console.log(err.statusCode);
